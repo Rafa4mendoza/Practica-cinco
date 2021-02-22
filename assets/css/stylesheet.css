@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.square{
+    width: 300px;
+    height: 300px;
+    border: blue 2px solid;
+    animation: bolita 10s infinite;
+    position: relative;
+}
+
+@keyframes bolita{
+    from{
+        background-color: coral;
+        left: 0;
+    }
+
+    to{
+        background-color: cyan;
+        left: 80%;
+        top: 30%;
+        border-radius: 100px;
+    }
+}
