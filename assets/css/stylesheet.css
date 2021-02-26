@@ -1,26 +1,90 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.square{
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden;
+}
+
+nav{
+    top: 90%;
+    width: 100%;
+    position: fixed;
+    z-index: 999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
+main{
+    width: 300vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wellcomeSection{
+    animation: sectionWellcome 2s;
+}
+
+#wellcomeH1-1{
+    animation: wellcomeMessage 2s 3s;
+}
+
+#wellcomeH1-2{
+    animation: wellcomeMessage 2s 4s;
+}
+
+#color{
     width: 300px;
     height: 300px;
-    border: blue 2px solid;
-    animation: bolita 10s infinite;
-    position: relative;
+    background-image: linear-gradient(#87b046, #e38929, #ba2211, #1176ba, #1411ba);
 }
 
-@keyframes bolita{
+@keyframes sectionWellcome{
     from{
-        background-color: coral;
-        left: 0;
+        background-color: transparent;
+        height: 0vh;
     }
-
     to{
-        background-color: cyan;
-        left: 80%;
-        top: 30%;
-        border-radius: 100px;
+        background-color: black;
+        height: 100vh;
+    }
+}
+
+@keyframes wellcomeMessage{
+    from{
+        display: none;
+    }
+    to{
+        display: block;
     }
 }
